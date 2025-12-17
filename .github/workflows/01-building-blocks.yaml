@@ -1,0 +1,26 @@
+name: building-blocks-01
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+
+jobs:
+    echo_hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: one_line script
+              run: echo Hello, world!
+    echo_goodbye:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Failed script
+              run: |
+                echo I will fail now
+                exit 1
+            - name : Say goodbye
+              run: echo Goodbye, world!
+      
