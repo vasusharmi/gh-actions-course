@@ -19,8 +19,8 @@ jobs:
         steps:
             - name: Failed script
               run: |
-                echo I will fail now
-                exit 1
+                echo I will succeed now
+                exit 0
             - name : Say goodbye
               run: echo Goodbye, world!
       
