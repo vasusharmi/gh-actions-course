@@ -1,6 +1,11 @@
 name : workflow-github-events-02
 
-on: push
+on: 
+    push:
+    pull_request:
+    schedule:
+        - cron: ' * 5 * * *'  # 
+    workflow_dispatch:
 
 jobs:
     github_events_job:
